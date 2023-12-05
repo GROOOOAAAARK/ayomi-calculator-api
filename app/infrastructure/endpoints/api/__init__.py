@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 
+from app.infrastructure.endpoints.api.calculation import router as calculation
 from app.infrastructure.configs import Settings, get_config
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -19,5 +20,7 @@ def get_app(config: Settings = None): #type: ignore
         allow_methods=["*"],
         allow_headers=["*"],
     )
+
+    app.include_router(calculation)
 
     return app

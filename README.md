@@ -10,3 +10,11 @@ make install-project
 make run
 ```
 
+Or
+
+```bash
+pipenv install
+
+python -m app
+```
+
