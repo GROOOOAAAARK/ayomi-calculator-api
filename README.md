@@ -21,6 +21,9 @@ source .envrc
 
 python -m app
 ```
+
+## Run tests
+
 ### E2E tests
 
 Use the postman collection in `tests/e2e` to run the tests.
@@ -36,3 +39,10 @@ docker network create --attachable ayomi-network
 docker compose -f docker/docker-compose.yml up
 ```
 
+## Upgrades
+
+- [ ] Handle multiple expressions in the same query
+- [ ] Add more supported operations in expression evaluation
+- [ ] Better read function in mongodb implementation
+- [ ] Add more tests (adapters, use cases, e2e w k6)
+  - [ ] Add tests on responses inside Postman collection
