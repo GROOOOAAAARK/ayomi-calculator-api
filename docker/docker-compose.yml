@@ -1,0 +1,28 @@
+version: '3.1'
+
+services:
+  mongo:
+    image: mongo
+    env_file:
+      - .envrc
+    ports:
+      - 27017:27017
+    networks:
+      - ayomi-network
+  ayomi-api:
+    depends_on:
+      - mongo
+    image: ayomi-api
+    # build:
+    #   context: ..
+    #   dockerfile: docker/app.Dockerfile
+    ports:
+      - 8000:8000
+    env_file:
+      - .envrc
+    networks:
+      - ayomi-network
+
+networks:
+  ayomi-network:
+    external: true
