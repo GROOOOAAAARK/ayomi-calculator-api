@@ -21,6 +21,10 @@ source .envrc
 
 python -m app
 ```
+### E2E tests
+
+Use the postman collection in `tests/e2e` to run the tests.
+You just have to set the environment variable `api_url` to `localhost:8000`.
 
 ## Docker
 

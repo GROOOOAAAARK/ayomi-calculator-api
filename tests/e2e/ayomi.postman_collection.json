@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "da75461a-da77-450d-a54c-a0b3655393be",
+		"name": "ayomi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17261550"
+	},
+	"item": [
+		{
+			"name": "EvaluateExpression",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"expression\": \"1 2 + 3 * 11 /\",\n    \"ref\": \"postman_dummy_expression\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{api_url}}/calculation/evaluate",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"calculation",
+						"evaluate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetResults",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api_url}}/calculation/results",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"calculation",
+						"results"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CSV results",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api_url}}/calculation/csv_results",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"calculation",
+						"csv_results"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
