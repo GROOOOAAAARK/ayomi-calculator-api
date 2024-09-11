@@ -34,8 +34,8 @@ You just have to set the environment variable `api_url` to `localhost:8000`.
 Run the project with docker:
 
 ```bash
-docker build --no-cache -f docker/app.Dockerfile -t ayomi-api .
-docker network create --attachable ayomi-network
+docker build --no-cache -f docker/app.Dockerfile -t rpn-api .
+docker network create --attachable rpn-network
 docker compose -f docker/docker-compose.yml up
 ```
 
